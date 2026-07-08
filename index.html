@@ -612,22 +612,43 @@
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="503838841"
+                   id="18132282274"
                    fixed='true'
-                   autoplay='false'
+                   autoplay='true'
                    theme='#42b983'
                    loop='all'
                    order='random'
                    preload='auto'
-                   volume='0.7'
+                   volume='0.3'
                    list-folded='true'
         >
         </meting-js>
     </div>
 </div>
 
+<script>
+    // 使用可用的 Meting API 镜像 (原 api.i-meto.com 已不可用)
+    var meting_api = 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r';
+</script>
 <script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="/libs/aplayer/Meting.min.js"></script>
+
+<script>
+    // 绕过浏览器自动播放限制：首次用户交互时触发播放
+    var triggerAutoplay = function () {
+        var player = document.querySelector('meting-js');
+        if (player && player.aplayer && !player.aplayer.playing) {
+            player.aplayer.play();
+        }
+        document.removeEventListener('click', triggerAutoplay);
+        document.removeEventListener('touchstart', triggerAutoplay);
+        document.removeEventListener('scroll', triggerAutoplay);
+    };
+    document.addEventListener('click', triggerAutoplay, { once: true });
+    document.addEventListener('touchstart', triggerAutoplay, { once: true });
+    document.addEventListener('scroll', triggerAutoplay, { once: true });
+</script>
+
 
     
 

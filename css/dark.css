@@ -192,7 +192,6 @@ body.DarkMode .aplayer {
     background: rgb(42 34 34);
     color: #42b983;
     font-family: Arial,Helvetica,sans-serif;
-    margin: 5px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.07),0 1px 5px 0 rgba(0,0,0,.1);
     border-radius: 2px;
     overflow: hidden;
@@ -201,7 +200,11 @@ body.DarkMode .aplayer {
     -ms-user-select: none;
     user-select: none;
     line-height: normal;
-    position: relative;
+}
+/* 修复吸底模式：保持 APlayer 的 fixed 定位不被覆盖 */
+body.DarkMode .aplayer.aplayer-fixed {
+    margin: 0;
+    position: fixed;
 }
 body.DarkMode .aplayer .aplayer-list ol li.aplayer-list-light {
     background: #666666;
@@ -212,8 +215,6 @@ body.DarkMode .aplayer .aplayer-list ol li:hover {
 }
 
 body.DarkMode .aplayer .aplayer-body {
-    position: relative;
-    filter: invert(.8);
 }
 
 /*图片滤镜*/
