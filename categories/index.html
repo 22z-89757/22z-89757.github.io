@@ -284,7 +284,8 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    <div id="pjax-content">
+        <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -363,6 +364,7 @@
 
 </main>
 
+    </div>
 
     <footer class="page-footer bg-color">
     
@@ -709,8 +711,9 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
+
+    <!-- PJAX: 无缝页面切换，保持音乐播放器持续播放 -->
+    <script src="/js/pjax.js"></script>
 
 </body>
 
