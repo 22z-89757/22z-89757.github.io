@@ -723,13 +723,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day12%20--%20%E4%BA%8C%E5%8F%89%E6%A0%91part02/">
+                <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day11%20--%20%E4%BA%8C%E5%8F%89%E6%A0%91part01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day12 -- 二叉树part02">
+                        <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day11 -- 二叉树part01">
                         
-                        <span class="card-title">算法训练day12 -- 二叉树part02</span>
+                        <span class="card-title">算法训练day11 -- 二叉树part01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -776,13 +776,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day5%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part01/">
+                <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day1%20--%20%E6%95%B0%E7%BB%84part01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day5 -- 哈希表part01">
+                        <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day1 -- 数组part01">
                         
-                        <span class="card-title">算法训练day5 -- 哈希表part01</span>
+                        <span class="card-title">算法训练day1 -- 数组part01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1292,38 +1292,49 @@ $(function () {
     <!-- PJAX: 无缝页面切换，保持音乐播放器持续播放 -->
     <script src="/js/pjax.js"></script>
 
-    <!-- 视频加载完成后隐藏过渡页 -->
+    <!-- 视频加载完成后隐藏过渡页并播放音乐 -->
     <script>
     (function() {
         var loader = document.getElementById('page-loader');
         if (!loader) return;
 
+        function finishLoading() {
+            loader.classList.add('fade-out');
+            setTimeout(function() {
+                loader.remove();
+                // 尝试自动播放音乐
+                var ap = document.querySelector('meting-js');
+                if (ap && ap.aplayer) {
+                    var playPromise = ap.aplayer.play();
+                    // 如果浏览器阻止自动播放，静默失败
+                    if (playPromise) {
+                        playPromise.catch(function() {});
+                    }
+                }
+            }, 700);
+        }
+
         var video = document.querySelector('video');
         if (!video) {
-            // 没有视频，直接隐藏
-            loader.classList.add('fade-out');
-            setTimeout(function() { loader.remove(); }, 700);
+            // 没有视频，短暂显示过渡页后进入
+            setTimeout(finishLoading, 600);
             return;
         }
 
         // 超时 15 秒强制显示
+        var done = false;
         var timeout = setTimeout(function() {
-            loader.classList.add('fade-out');
-            setTimeout(function() { loader.remove(); }, 700);
+            if (!done) { done = true; finishLoading(); }
         }, 15000);
 
         // 视频可以开始播放时隐藏过渡页
         video.addEventListener('canplaythrough', function() {
-            clearTimeout(timeout);
-            loader.classList.add('fade-out');
-            setTimeout(function() { loader.remove(); }, 700);
+            if (!done) { done = true; clearTimeout(timeout); finishLoading(); }
         }, { once: true });
 
         // 如果视频已经加载了足够数据
         if (video.readyState >= 3) {
-            clearTimeout(timeout);
-            loader.classList.add('fade-out');
-            setTimeout(function() { loader.remove(); }, 700);
+            if (!done) { done = true; clearTimeout(timeout); finishLoading(); }
         }
     })();
     </script>
