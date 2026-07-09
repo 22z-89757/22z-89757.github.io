@@ -93,6 +93,35 @@
 
 
 <body>
+    <!-- 视频加载过渡页 -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">LOADING</div>
+        </div>
+    </div>
+    <style>
+        #page-loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #1a1a2e; z-index: 9999;
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        #page-loader.fade-out { opacity: 0; visibility: hidden; pointer-events: none; }
+        .loader-content { text-align: center; }
+        .loader-spinner {
+            width: 48px; height: 48px; margin: 0 auto 20px;
+            border: 3px solid rgba(255,255,255,0.2);
+            border-top-color: #42b983; border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loader-text {
+            color: rgba(255,255,255,0.6); font-family: monospace;
+            font-size: 14px; letter-spacing: 4px;
+        }
+    </style>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -525,64 +554,6 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day1%20--%20%E6%95%B0%E7%BB%84part01/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/04.png" class="responsive-img" alt="算法训练day1 -- 数组part01">
-                            
-                            <span class="card-title">算法训练day1 -- 数组part01</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                day1 – 数组part01704.二分查找
-力扣题目链接：704. 二分查找 - 力扣（LeetCode）
-
-文档讲解：704. 二分查找 | 二分查找 | 有序数组 | 循环不变量 | 代码随想录
-
-视频讲解：手把手带你撕出正确的二分
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    日常算法训练记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C#</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day10%20--%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97part02/">
                         <div class="card-image">
                             
@@ -639,23 +610,25 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day11%20--%20%E4%BA%8C%E5%8F%89%E6%A0%91part01/">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day1%20--%20%E6%95%B0%E7%BB%84part01/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/02.jpg" class="responsive-img" alt="算法训练day11 -- 二叉树part01">
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day1 -- 数组part01">
                             
-                            <span class="card-title">算法训练day11 -- 二叉树part01</span>
+                            <span class="card-title">算法训练day1 -- 数组part01</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                day11 – 二叉树part01理论基础：二叉树理论基础篇 | 二叉树 | 遍历 | 存储方式 | 代码随想录-全网最全算法数据结构刷题学习路线|图文+视频教程|免费开源
-注意二叉树节点的定义：
-/**
- * Definition for
+                                day1 – 数组part01704.二分查找
+力扣题目链接：704. 二分查找 - 力扣（LeetCode）
+
+文档讲解：704. 二分查找 | 二分查找 | 有序数组 | 循环不变量 | 代码随想录
+
+视频讲解：手把手带你撕出正确的二分
                             
                         </div>
                         <div class="publish-info">
@@ -699,7 +672,7 @@
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day12 -- 二叉树part02">
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day12 -- 二叉树part02">
                             
                             <span class="card-title">算法训练day12 -- 二叉树part02</span>
                         </div>
@@ -753,11 +726,123 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day11%20--%20%E4%BA%8C%E5%8F%89%E6%A0%91part01/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day11 -- 二叉树part01">
+                            
+                            <span class="card-title">算法训练day11 -- 二叉树part01</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                day11 – 二叉树part01理论基础：二叉树理论基础篇 | 二叉树 | 遍历 | 存储方式 | 代码随想录-全网最全算法数据结构刷题学习路线|图文+视频教程|免费开源
+注意二叉树节点的定义：
+/**
+ * Definition for
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    日常算法训练记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day5%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part01/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/02.jpg" class="responsive-img" alt="算法训练day5 -- 哈希表part01">
+                            
+                            <span class="card-title">算法训练day5 -- 哈希表part01</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                day5 – 哈希表part01
+哈希表的概念和实现以及冲突处理等：
+文章讲解：哈希表理论基础 | 哈希表 | 哈希函数 | 哈希碰撞 | 代码随想录
+推荐去看此视频讲解（原作者：蓝不过海呀 | 平台：bilibili）：散列表(哈希表) 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    日常算法训练记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day2%20--%20%E6%95%B0%E7%BB%84part02/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/03.png" class="responsive-img" alt="算法训练day2 -- 数组part02">
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day2 -- 数组part02">
                             
                             <span class="card-title">算法训练day2 -- 数组part02</span>
                         </div>
@@ -813,7 +898,7 @@
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day4 -- 链表part02">
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day4 -- 链表part02">
                             
                             <span class="card-title">算法训练day4 -- 链表part02</span>
                         </div>
@@ -865,67 +950,11 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day7%20--%20%E5%AD%97%E7%AC%A6%E4%B8%B2part01/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/03.png" class="responsive-img" alt="算法训练day7 -- 字符串part01">
-                            
-                            <span class="card-title">算法训练day7 -- 字符串part01</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                day7 – 字符串part01344.反转字符串
-力扣题目链接：344. 反转字符串 - 力扣（LeetCode）
-文章讲解：344.反转字符串 | 双指针 | 原地修改 | 代码随想录
-视频讲解：字符串基础操作！ | LeetCode：
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    日常算法训练记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C#</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day6%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part02/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day6 -- 哈希表part02">
+                            <img src="/medias/featureimages/04.png" class="responsive-img" alt="算法训练day6 -- 哈希表part02">
                             
                             <span class="card-title">算法训练day6 -- 哈希表part02</span>
                         </div>
@@ -977,79 +1006,23 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day9%20--%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97part01/">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day7%20--%20%E5%AD%97%E7%AC%A6%E4%B8%B2part01/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day9 -- 栈与队列part01">
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day7 -- 字符串part01">
                             
-                            <span class="card-title">算法训练day9 -- 栈与队列part01</span>
+                            <span class="card-title">算法训练day7 -- 字符串part01</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                day9 – 栈与队列part01理论基础：栈与队列理论基础 | 栈 | 队列 | 容器适配器 | 代码随想录
-232.用栈实现队列
-力扣题目链接：232. 用栈实现队列 - 力扣（LeetCode）
-文章讲解：232.用栈实现队列 | 栈
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    日常算法训练记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C#</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day5%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part01/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/04.png" class="responsive-img" alt="算法训练day5 -- 哈希表part01">
-                            
-                            <span class="card-title">算法训练day5 -- 哈希表part01</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                day5 – 哈希表part01
-哈希表的概念和实现以及冲突处理等：
-文章讲解：哈希表理论基础 | 哈希表 | 哈希函数 | 哈希碰撞 | 代码随想录
-推荐去看此视频讲解（原作者：蓝不过海呀 | 平台：bilibili）：散列表(哈希表) 
+                                day7 – 字符串part01344.反转字符串
+力扣题目链接：344. 反转字符串 - 力扣（LeetCode）
+文章讲解：344.反转字符串 | 双指针 | 原地修改 | 代码随想录
+视频讲解：字符串基础操作！ | LeetCode：
                             
                         </div>
                         <div class="publish-info">
@@ -1093,7 +1066,7 @@
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/02.jpg" class="responsive-img" alt="算法训练day8 -- 字符串part02">
+                            <img src="/medias/featureimages/04.png" class="responsive-img" alt="算法训练day8 -- 字符串part02">
                             
                             <span class="card-title">算法训练day8 -- 字符串part02</span>
                         </div>
@@ -1162,6 +1135,62 @@
 力扣题目链接：203. 移除链表元素 - 力扣（LeetCode）
 文档讲解：203.移除链表元素 | 链表 | 虚拟头节点 | 代码随想录
 视频讲解：手把手带你学会操作链表 | Leet
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    日常算法训练记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day9%20--%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97part01/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day9 -- 栈与队列part01">
+                            
+                            <span class="card-title">算法训练day9 -- 栈与队列part01</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                day9 – 栈与队列part01理论基础：栈与队列理论基础 | 栈 | 队列 | 容器适配器 | 代码随想录
+232.用栈实现队列
+力扣题目链接：232. 用栈实现队列 - 力扣（LeetCode）
+文章讲解：232.用栈实现队列 | 栈
                             
                         </div>
                         <div class="publish-info">
@@ -1579,6 +1608,42 @@ $(function () {
 
     <!-- PJAX: 无缝页面切换，保持音乐播放器持续播放 -->
     <script src="/js/pjax.js"></script>
+
+    <!-- 视频加载完成后隐藏过渡页 -->
+    <script>
+    (function() {
+        var loader = document.getElementById('page-loader');
+        if (!loader) return;
+
+        var video = document.querySelector('video');
+        if (!video) {
+            // 没有视频，直接隐藏
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+            return;
+        }
+
+        // 超时 15 秒强制显示
+        var timeout = setTimeout(function() {
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+        }, 15000);
+
+        // 视频可以开始播放时隐藏过渡页
+        video.addEventListener('canplaythrough', function() {
+            clearTimeout(timeout);
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+        }, { once: true });
+
+        // 如果视频已经加载了足够数据
+        if (video.readyState >= 3) {
+            clearTimeout(timeout);
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+        }
+    })();
+    </script>
 
 </body>
 

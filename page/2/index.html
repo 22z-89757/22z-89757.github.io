@@ -52,6 +52,35 @@
 
 
 <body>
+    <!-- 视频加载过渡页 -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">LOADING</div>
+        </div>
+    </div>
+    <style>
+        #page-loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #1a1a2e; z-index: 9999;
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        #page-loader.fade-out { opacity: 0; visibility: hidden; pointer-events: none; }
+        .loader-content { text-align: center; }
+        .loader-spinner {
+            width: 48px; height: 48px; margin: 0 auto 20px;
+            border: 3px solid rgba(255,255,255,0.2);
+            border-top-color: #42b983; border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loader-text {
+            color: rgba(255,255,255,0.6); font-family: monospace;
+            font-size: 14px; letter-spacing: 4px;
+        }
+    </style>
+
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -783,6 +812,42 @@ $(function () {
 
     <!-- PJAX: 无缝页面切换，保持音乐播放器持续播放 -->
     <script src="/js/pjax.js"></script>
+
+    <!-- 视频加载完成后隐藏过渡页 -->
+    <script>
+    (function() {
+        var loader = document.getElementById('page-loader');
+        if (!loader) return;
+
+        var video = document.querySelector('video');
+        if (!video) {
+            // 没有视频，直接隐藏
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+            return;
+        }
+
+        // 超时 15 秒强制显示
+        var timeout = setTimeout(function() {
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+        }, 15000);
+
+        // 视频可以开始播放时隐藏过渡页
+        video.addEventListener('canplaythrough', function() {
+            clearTimeout(timeout);
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+        }, { once: true });
+
+        // 如果视频已经加载了足够数据
+        if (video.readyState >= 3) {
+            clearTimeout(timeout);
+            loader.classList.add('fade-out');
+            setTimeout(function() { loader.remove(); }, 700);
+        }
+    })();
+    </script>
 
 </body>
 
