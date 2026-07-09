@@ -15,6 +15,17 @@
     var CONTENT_SELECTOR = '#pjax-content';
     var currentUrl = location.href;
 
+    // 新会话检测：每次重新打开网站都从首页开始
+    if (!sessionStorage.getItem('pjax-session')) {
+        sessionStorage.setItem('pjax-session', '1');
+        if (location.pathname !== '/' && location.pathname !== '/index.html') {
+            // 替换当前历史记录条目，避免产生多余的后退记录
+            history.replaceState(null, '', '/');
+            location.replace('/');
+            return;
+        }
+    }
+
     /**
      * 判断链接是否应该被 PJAX 拦截
      */
