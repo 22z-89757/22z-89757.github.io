@@ -71,23 +71,53 @@
     }
 
     /**
-     * 提取页面中的 <script> 标签并执行（用于新内容中的内联脚本）
+     * 按顺序执行脚本：外部脚本加载完后再执行后续内联脚本，
+     * 保证依赖关系正确（如 echarts.js 加载完后再执行 echarts.init()）。
+     * 已加载过的外部脚本跳过，避免重复下载。
      */
     function executeScripts(container) {
-        var scripts = container.querySelectorAll('script');
-        scripts.forEach(function (oldScript) {
+        var scripts = Array.from(container.querySelectorAll('script'));
+        var loadedScripts = {}; // 记录已加载的外部脚本 URL
+
+        function processNext(index) {
+            if (index >= scripts.length) return;
+
+            var oldScript = scripts[index];
             var newScript = document.createElement('script');
+
             // 复制属性
             Array.from(oldScript.attributes).forEach(function (attr) {
                 newScript.setAttribute(attr.name, attr.value);
             });
-            // 复制内容
-            newScript.textContent = oldScript.textContent;
-            // 替换
+
+            // 外部脚本（有 src 属性）
+            if (oldScript.src) {
+                // 已加载过则跳过
+                if (loadedScripts[oldScript.src]) {
+                    if (oldScript.parentNode) oldScript.parentNode.removeChild(oldScript);
+                    processNext(index + 1);
+                    return;
+                }
+                loadedScripts[oldScript.src] = true;
+                newScript.onload = function () { processNext(index + 1); };
+                newScript.onerror = function () { processNext(index + 1); };
+            } else {
+                // 内联脚本：直接复制内容后继续下一个
+                newScript.textContent = oldScript.textContent;
+            }
+
+            // 替换旧脚本节点
             if (oldScript.parentNode) {
                 oldScript.parentNode.replaceChild(newScript, oldScript);
             }
-        });
+
+            // 内联脚本无需等待，继续处理下一个
+            if (!oldScript.src) {
+                processNext(index + 1);
+            }
+        }
+
+        processNext(0);
     }
 
     /**
