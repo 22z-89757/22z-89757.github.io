@@ -324,16 +324,8 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-<script>
-    
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
-    
-    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
-
+    // 非文章页面固定使用 banner 图
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.png)');
 </script>
 
 
@@ -385,117 +377,11 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day4%20--%20%E9%93%BE%E8%A1%A8part02/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="算法训练day4 -- 链表part02">
-                            
-                            <span class="card-title">算法训练day4 -- 链表part02</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                day4 – 链表part0224.两两交换链表中的节点
-力扣题目链接：24. 两两交换链表中的节点 - 力扣（LeetCode）
-文章讲解：24. 两两交换链表中的节点 | 链表 | 虚拟头结点 | 节点交换 | 代码随想录
-视频讲解：帮
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    日常算法训练记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C#</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day6%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part02/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="算法训练day6 -- 哈希表part02">
-                            
-                            <span class="card-title">算法训练day6 -- 哈希表part02</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                day6 – 哈希表part02454.四数相加
-力扣题目链接：454. 四数相加 II - 力扣（LeetCode）
-文章讲解：第454题.四数相加II | 哈希表 | map | 统计查找 | 代码随想录
-视频讲解：学透哈希表，map使
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    日常算法训练记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C#</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day3%20--%20%E9%93%BE%E8%A1%A8part01/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="算法训练day3 -- 链表part01">
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day3 -- 链表part01">
                             
                             <span class="card-title">算法训练day3 -- 链表part01</span>
                         </div>
@@ -544,64 +430,11 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day9%20--%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97part01/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="算法训练day9 -- 栈与队列part01">
-                            
-                            <span class="card-title">算法训练day9 -- 栈与队列part01</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                day9 – 栈与队列part01理论基础：栈与队列理论基础 | 栈 | 队列 | 容器适配器 | 代码随想录
-232.用栈实现队列
-力扣题目链接：232. 用栈实现队列 - 力扣（LeetCode）
-文章讲解：232.用栈实现队列 | 栈
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    日常算法训练记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C#</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day8%20--%20%E5%AD%97%E7%AC%A6%E4%B8%B2part02/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="算法训练day8 -- 字符串part02">
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day8 -- 字符串part02">
                             
                             <span class="card-title">算法训练day8 -- 字符串part02</span>
                         </div>
@@ -650,11 +483,170 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day5%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part01/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day5 -- 哈希表part01">
+                            
+                            <span class="card-title">算法训练day5 -- 哈希表part01</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                day5 – 哈希表part01
+哈希表的概念和实现以及冲突处理等：
+文章讲解：哈希表理论基础 | 哈希表 | 哈希函数 | 哈希碰撞 | 代码随想录
+推荐去看此视频讲解（原作者：蓝不过海呀 | 平台：bilibili）：散列表(哈希表) 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    日常算法训练记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day9%20--%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97part01/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day9 -- 栈与队列part01">
+                            
+                            <span class="card-title">算法训练day9 -- 栈与队列part01</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                day9 – 栈与队列part01理论基础：栈与队列理论基础 | 栈 | 队列 | 容器适配器 | 代码随想录
+232.用栈实现队列
+力扣题目链接：232. 用栈实现队列 - 力扣（LeetCode）
+文章讲解：232.用栈实现队列 | 栈
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    日常算法训练记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day6%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part02/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day6 -- 哈希表part02">
+                            
+                            <span class="card-title">算法训练day6 -- 哈希表part02</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                day6 – 哈希表part02454.四数相加
+力扣题目链接：454. 四数相加 II - 力扣（LeetCode）
+文章讲解：第454题.四数相加II | 哈希表 | map | 统计查找 | 代码随想录
+视频讲解：学透哈希表，map使
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    日常算法训练记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day7%20--%20%E5%AD%97%E7%AC%A6%E4%B8%B2part01/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="算法训练day7 -- 字符串part01">
+                            <img src="/medias/featureimages/04.png" class="responsive-img" alt="算法训练day7 -- 字符串part01">
                             
                             <span class="card-title">算法训练day7 -- 字符串part01</span>
                         </div>
@@ -703,11 +695,64 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day4%20--%20%E9%93%BE%E8%A1%A8part02/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day4 -- 链表part02">
+                            
+                            <span class="card-title">算法训练day4 -- 链表part02</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                day4 – 链表part0224.两两交换链表中的节点
+力扣题目链接：24. 两两交换链表中的节点 - 力扣（LeetCode）
+文章讲解：24. 两两交换链表中的节点 | 链表 | 虚拟头结点 | 节点交换 | 代码随想录
+视频讲解：帮
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    日常算法训练记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/C/">
+                            <span class="chip bg-color">C#</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day2%20--%20%E6%95%B0%E7%BB%84part02/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="算法训练day2 -- 数组part02">
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day2 -- 数组part02">
                             
                             <span class="card-title">算法训练day2 -- 数组part02</span>
                         </div>
@@ -760,7 +805,7 @@
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="算法训练day12 -- 二叉树part02">
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day12 -- 二叉树part02">
                             
                             <span class="card-title">算法训练day12 -- 二叉树part02</span>
                         </div>
@@ -811,64 +856,11 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day5%20--%20%E5%93%88%E5%B8%8C%E8%A1%A8part01/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="算法训练day5 -- 哈希表part01">
-                            
-                            <span class="card-title">算法训练day5 -- 哈希表part01</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                day5 – 哈希表part01
-哈希表的概念和实现以及冲突处理等：
-文章讲解：哈希表理论基础 | 哈希表 | 哈希函数 | 哈希碰撞 | 代码随想录
-推荐去看此视频讲解（原作者：蓝不过海呀 | 平台：bilibili）：散列表(哈希表) 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%97%A5%E5%B8%B8%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    日常算法训练记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/C/">
-                            <span class="chip bg-color">C#</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">
-                            <span class="chip bg-color">算法</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/2026/07/09/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/day11%20--%20%E4%BA%8C%E5%8F%89%E6%A0%91part01/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="算法训练day11 -- 二叉树part01">
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day11 -- 二叉树part01">
                             
                             <span class="card-title">算法训练day11 -- 二叉树part01</span>
                         </div>
@@ -921,7 +913,7 @@
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="算法训练day10 -- 栈与队列part02">
+                            <img src="/medias/featureimages/05.png" class="responsive-img" alt="算法训练day10 -- 栈与队列part02">
                             
                             <span class="card-title">算法训练day10 -- 栈与队列part02</span>
                         </div>
@@ -974,7 +966,7 @@
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="算法训练day1 -- 数组part01">
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="算法训练day1 -- 数组part01">
                             
                             <span class="card-title">算法训练day1 -- 数组part01</span>
                         </div>
